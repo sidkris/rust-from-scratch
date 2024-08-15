@@ -4,6 +4,7 @@ fn main(){
 
     print_name();
     height_check(186);
+    age_check(30);
 
 }
 
@@ -39,5 +40,11 @@ fn height_check(height : i32){
         println!("hey, a normal human being! ;)")
     }
 
+
+}
+
+fn age_check(age : i32){
+
+    println!("{}", if age <= 18 {"you are a teenager!"} else {"you are an adult!"});
 
 }
