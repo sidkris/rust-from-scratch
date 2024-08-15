@@ -20,7 +20,6 @@ fn print_name() {
 
     let name = name.trim();
 
-    // Print a greeting message
     println!("Hello there, {}!", name);
 
 }
