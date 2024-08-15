@@ -1,6 +1,13 @@
 use std::io;
 
-fn main() {
+fn main(){
+
+    print_name();
+
+}
+
+
+fn print_name() {
 
     println!("Please enter your name: ");
 
@@ -14,6 +21,7 @@ fn main() {
 
     // Print a greeting message
     println!("Hello there, {}!", name);
+
 
 }
 
