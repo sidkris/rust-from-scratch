@@ -5,7 +5,7 @@ fn main(){
     print_name();
     height_check(186);
     age_check(30);
-
+    while_loop();
 }
 
 
@@ -46,5 +46,17 @@ fn height_check(height : i32){
 fn age_check(age : i32){
 
     println!("{}", if age <= 18 {"you are a teenager!"} else {"you are an adult!"});
+
+}
+
+
+fn while_loop(){
+
+    let mut i : i32 = 0;
+
+    while i <= 10 {
+        println!("i = {}", i);
+        i += 1;
+    }
 
 }
