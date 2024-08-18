@@ -138,13 +138,12 @@ fn split_strings(input_string : String, delimiter : char, chunk_index : usize) -
 
 // ==========================================================================
 
-
 fn panic_example(name : &str){
-
-    // let name = "Sid";
 
     if name != "Sid"{
         panic!("Hey, you aren't Sid. Exiting code..");
     }
 
 }
+
+// ==========================================================================
