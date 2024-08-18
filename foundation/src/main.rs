@@ -1,4 +1,6 @@
 use std::io;
+use std::fs::File;
+use std::io::{BufReader, BufRead};
 
 fn main(){
 
@@ -14,7 +16,9 @@ fn main(){
     let chunks = split_strings("Hello, World".to_string(), ',', 0);
     println!("Split String : {}", chunks);
 
-    panic_example("not Sid");
+    panic_example("Sid");
+
+    read_txt_file(r#"hello.txt"#);
 
 }
 
@@ -143,7 +147,37 @@ fn panic_example(name : &str){
     if name != "Sid"{
         panic!("Hey, you aren't Sid. Exiting code..");
     }
-
+    println!("Hey Sid!");
 }
 
 // ==========================================================================
+
+fn read_txt_file(fpath: &str) {
+ 
+    println!("Attempting to read {}", fpath);
+
+    let file = File::open(fpath);
+
+    let file = match file {
+        Ok(file) => file,
+        Err(error) => match error.kind() {
+            std::io::ErrorKind::NotFound => {
+                panic!("File Not Found: {}", error)
+            }
+            _ => {
+                panic!("Error Opening File: {}", error)
+            }
+        },
+    };
+
+    // Create a buffered reader
+    let reader = BufReader::new(file);
+
+    // Iterate through the lines of the file
+    for line in reader.lines() {
+        match line {
+            Ok(content) => println!("{}", content),
+            Err(e) => eprintln!("Error reading line: {}", e),
+        }
+    }
+}
