@@ -12,6 +12,6 @@ fn main() {
         age : 30
     };
 
-    println!("{:?}", sid);
+    println!("{} is {} years old.", sid.name, sid.age);
 
 }
