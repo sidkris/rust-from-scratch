@@ -5,9 +5,13 @@ struct Person{
     age : u8,
 }
 
-fn main(){
+fn main() {
 
-    println!("{:?}", Person{name : "Sid".to_string(),
-                            age : 30});
+    let sid = Person{
+        name : "Sid".to_string(),
+        age : 30
+    };
+
+    println!("{:?}", sid);
 
 }
