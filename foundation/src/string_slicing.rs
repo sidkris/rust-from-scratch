@@ -5,4 +5,21 @@ fn main(){
     println!("{}", &sentence[0..5]);
 
 
+
+
+// match characters
+
+for c in sentence.chars() {
+
+    match c {
+
+        'a' | 'e' | 'i' | 'o' | 'u' => println!("hey, I found the vowel {}!", c),
+
+        _ => continue,
+
+    }
+
+
+}
+
 }
