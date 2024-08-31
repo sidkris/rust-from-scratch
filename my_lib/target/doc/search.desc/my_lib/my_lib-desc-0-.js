@@ -1,1 +1,1 @@
-searchState.loadedDescShard("my_lib", 0, "the read_stdin function reads a line from stdin and …")
+searchState.loadedDescShard("my_lib", 0, "This is a simple library that provides utilities for …\nReturns the argument unchanged.\nCalls <code>U::from(self)</code>.\nthe read_stdin function reads a line from stdin and …\nSplits a <code>String</code> by a delimiter specified in <code>cli</code> and …")
