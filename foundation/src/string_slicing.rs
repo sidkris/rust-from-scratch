@@ -4,9 +4,6 @@ fn main(){
 
     println!("{}", &sentence[0..5]);
 
-
-
-
 // match characters
 
 for c in sentence.chars() {
