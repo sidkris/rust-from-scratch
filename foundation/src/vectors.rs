@@ -21,6 +21,7 @@ fn mutable_vec(){
     num_vec.extend([4, 5, 6, 7, 8, 9, 10]);
 
     println!("New Vec : {:?}", num_vec);
-
+    println!("\nThe first element of the vector is {:?}", num_vec.first().unwrap());
     println!("\nThe last element of the vector is {:?}", num_vec.last().unwrap());
+
 }
