@@ -18,7 +18,7 @@ fn mutable_vec(){
 
     let mut num_vec = vec![1, 2, 3];
 
-    num_vec.extend([4, 5, 6, 7, 8, 9, 10]);
+    num_vec.extend([4, 5, 6, 7, 8, 9, 10]); // 'push' for adding a single element to the end of the vec
 
     println!("New Vec : {:?}", num_vec);
     println!("\nThe first element of the vector is {:?}", num_vec.first().unwrap());
