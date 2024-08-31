@@ -21,6 +21,9 @@ fn main(){
     let square_area = square.calculate_area();
     println!("Area of the square is {}", square_area);
 
+    let city = MegaCities::Mumbai;
+    megacity_check(city);
+
 }
 
 
@@ -55,5 +58,37 @@ impl Shape {
             Self::Circle(radius) => 3.14 * (radius * radius),
             Self::Square(side) => side * side,
         }
+    }
+}
+
+// using enums as a datatype
+#[derive(Debug)]
+enum MegaCities {
+    Mumbai,
+    NewYorkCity,
+    NewDelhi,
+    Tokyo,
+    Jakarta,
+    Shanghai,
+    Beijing,
+}
+
+struct Cities{
+    country : String,
+    city : MegaCities
+}
+
+
+fn megacity_check(city: MegaCities) {
+    match city {
+        MegaCities::Mumbai 
+        | MegaCities::NewYorkCity 
+        | MegaCities::NewDelhi 
+        | MegaCities::Tokyo 
+        | MegaCities::Jakarta 
+        | MegaCities::Shanghai 
+        | MegaCities::Beijing => {
+            println!("{:?} is a megacity!", city);
+        },
     }
 }
