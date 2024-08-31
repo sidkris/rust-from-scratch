@@ -1,0 +1,1 @@
+searchState.loadedDescShard("my_lib", 0, "the read_stdin function reads a line from stdin and …")
