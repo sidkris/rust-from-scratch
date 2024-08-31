@@ -14,10 +14,12 @@
 fn main(){
 
     let file_size = FileSize::Bytes(1024);
-
     let formatted_size = file_size.format_size();
-
     println!("{}", formatted_size);
+
+    let square = Shape::Square(10.0);
+    let square_area = square.calculate_area();
+    println!("Area of the square is {}", square_area);
 
 }
 
@@ -43,6 +45,15 @@ impl FileSize {
             Self::Kilobytes(kilobytes) => format!("{} KB", kilobytes),
             Self::Megabytes(megabytes) => format!("{} MB", megabytes),
             Self::Gigabytes(gigabytes) => format!("{} GB", gigabytes),
+        }
+    }
+}
+
+impl Shape {
+    fn calculate_area(&self) -> f64 {
+        match self{
+            Self::Circle(radius) => 3.14 * (radius * radius),
+            Self::Square(side) => side * side,
         }
     }
 }
