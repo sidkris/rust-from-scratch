@@ -1,3 +1,5 @@
+use rand::seq::SliceRandom;
+use rand::thread_rng;
 
 fn main() {
 
@@ -16,4 +18,30 @@ fn main() {
     println!("{:?}", sample_map);
 
 
+    fruit_salad();
+
 }
+
+
+fn fruit_salad() {
+
+    let mut fruits : Vec<&str> = vec! [
+        "Apple",
+        "Orange",
+        "Pear",
+        "Peach",
+        "Strawberry",
+        "Watermelon"
+    ];
+
+
+    // Shuffle the fruits
+    let mut rng = thread_rng();
+    fruits.shuffle(&mut rng);
+
+    println!("\nFruit Salad:\n");
+
+    for item in &fruits {
+        println!("{}", item);
+    }
+    }
